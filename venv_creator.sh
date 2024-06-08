@@ -16,7 +16,7 @@ EOF
 presentation
 
 if ! command -v virtualenv &> /dev/null; then
-    echo "virtualenv non è installato. Installazione in corso..."
+    echo "virtualenv is not installed. Installing now..."
     pip install virtualenv
 fi
 
@@ -27,5 +27,6 @@ source venv/bin/activate
 if [ -f "requirements.txt" ]; then
     pip install -r requirements.txt
 else
-    echo "Il file requirements.txt non esiste. Non verranno installati requisiti."
+    echo "Requirements.txt does not exist. No requirements will be installed."
+    echo "Create requirements.txt and re run this script."
 fi
